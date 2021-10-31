@@ -21,8 +21,8 @@
     
     - name: "Adicionar a chave ssh do git"
       copy: >
-        src=/home/ubuntu/.ssh/id_rsa_daltro
-        dest=/home/ubuntu/id_rsa_daltro
+        src=/home/ubuntu/daltro/ssh/id_rsa
+        dest=/home/ubuntu/id_rsa
         owner=ubuntu
         group=ubuntu
         mode=0600
@@ -30,7 +30,7 @@
     - name: "Clonar o repositório do git"
       git: >
         repo=git@github.com:osanam-giordane/MobEAD.git
-        key_file=/home/ubuntu/id_rsa_daltro
+        key_file=/home/ubuntu/id_rsa
         dest=/home/ubuntu/daltro
         accept_hostkey=yes
         force=yes

@@ -1,13 +1,13 @@
-resource "aws_security_group" "acesso_geral_11" {
-  name        = "acesso_geral_11"
-  description = "Atividade04"
+resource "aws_security_group" "padrao" {
+  name        = "padrao"
+  description = "Atividade04-daltro"
 
   ingress = [
     {
       cidr_blocks      = [
         "0.0.0.0/0",
       ]
-      description      = "Para acessar a maquina com todas as portas"
+      description      = "Acesso para todas as origens"
       from_port        = 0
       ipv6_cidr_blocks = [
         "::/0",
@@ -25,7 +25,7 @@ resource "aws_security_group" "acesso_geral_11" {
       cidr_blocks      = [
         "0.0.0.0/0",
       ]
-      description      = "Para acessar a maquina de todas as portas"
+      description      = "Acesso para todas as origens"
       from_port        = 0
       ipv6_cidr_blocks = [
         "::/0",
@@ -40,6 +40,6 @@ resource "aws_security_group" "acesso_geral_11" {
   
 
   tags = {
-    Name = "acesso_geral_11"
+    Name = "padrao"
   }
 }
